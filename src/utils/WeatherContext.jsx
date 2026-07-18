@@ -93,7 +93,7 @@ const WeatherContext = ({ children }) => {
       const WeatherCode = weather?.data?.hourly?.weather_code;
       const isDay = weather?.data?.hourly?.is_day;
       const now = new Date();
-      const startIndex = weatherTime.findIndex((t) => {
+      let startIndex = weatherTime.findIndex((t) => {
         return new Date(t).getHours() === now.getHours();
       })
       if (startIndex === -1) startIndex = 0;
