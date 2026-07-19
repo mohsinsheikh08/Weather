@@ -3,7 +3,7 @@ import { ShareData } from "../../utils/WeatherContext";
 import Sun from '../../icons/sun.png'
 const HourlyForecastComp = ({e}) => {
   return (
-    <div className="flex flex-col w-[100%] h-full justify-center items-center">
+    <div className="flex flex-col w-[100%] mb-3 mt-3 h-full justify-center items-center">
       <p className="h-5 text-sm   font-medium">{e.time} {e.AMPM}</p>
       <div className="h-10 flex  overflow-visible justify-center items-center">
         <img 

@@ -72,12 +72,12 @@ const HourlyForecast = () => {
   }));
 
   return (
-    <div className={` rounded-lg transition-all ease-in-out duration-500  ${DarkLight ? "text-white" : "text-black"} w-full ${DarkLight ? "bg-[#172135]" : "bg-white"}  flex flex-col h-33`}>
+    <div className={` rounded-lg marginBottom transition-all ease-in-out duration-500  ${DarkLight ? "text-white" : "text-black"} w-full ${DarkLight ? "bg-[#172135]" : "bg-white"}  flex flex-col h-33 grids1`}>
       <div className={`border-b-2 rounded-tr-lg  rounded-tl-lg w-full bg-gradient-to-r transition-all ease-in-out duration-500  ${DarkLight ? "bg-[#212b3e]" : "from-[#F7F8FC] to-[#F7F8FC] via-[#F7FBFE]"}  h-12 text-sm flex justify-between items-center px-5 transition-all ease-in-out duration-500   ${DarkLight ? "border-[#252D3A]" : "border-gray-300"} `}>
         <p className="font-semibold tracking-wide">Hourly Forecast</p>
 
       </div>
-      <div className="px-5 grid grid-cols-10 gap-1  h-28 items-center">
+      <div className="px-5  grid grid-cols-10 gap-1 grids  h-23  items-center">
         {HourlyComps.map((e) => {
           return <HourlyForecastComp key={e.id} e={e} />;
         })}

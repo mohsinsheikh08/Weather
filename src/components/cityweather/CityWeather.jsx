@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { MapPin, Droplet, Wind, Thermometer, Eye } from "lucide-react";
 import CityWeatherRight from '../../components/cityweather/CityWeatherRight.jsx'
 import Cloud from "../../icons/cloud.png";
@@ -20,8 +20,6 @@ const CityWeather = () => {
   const {
     DarkLight,
     city,
-    latitude,
-    longitude,
     country,
     loading,
     setDots,
@@ -149,7 +147,7 @@ const CityWeather = () => {
   }, [loading]);
 
   return (
-    <div className={`h-[105%] p-1  transition-all ease-in-out duration-500  rounded-lg ${DarkLight ? "bg-[#172135]" : ""}  w-full   flex justify-between `}>
+    <div className={`h-[105%] p-1  transition-all ease-in-out duration-500  rounded-lg ${DarkLight ? "bg-[#172135]" : ""}  w-full   flex justify-between  responsive4`}>
       <div className="flex ml-3 h-full w-[46%] flex-col justify-between">
         <div className=" flex pt-3 justify-start  items-center w-120 h-8">
           <MapPin className={`transition-all ease-in-out duration-500 ${DarkLight ? "text-[#7997CE]" : "text-[white]"}`} />
@@ -208,7 +206,7 @@ const CityWeather = () => {
           </p>
         </div>
       </div>
-      <div className="w-[45%] flex flex-wrap  justify-center items-center  py-5 h-full ">
+      <div className="w-[45%] responsive8 flex flex-wrap  justify-center items-center  py-5 h-full ">
         {CityWeatherComp.map((e) => {
           return <CityWeatherRight key={e.id} e={e} />;
         })}

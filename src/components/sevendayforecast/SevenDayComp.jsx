@@ -36,8 +36,8 @@ const SevenDayComp = ({ e }) => {
   const Icons = HourlyIcons[e.icon] || {day : Sun};
   // useEffect(() => {console.log(Icons)}, [])
   return (
-    <div className={`w-[15%] transition-all ease-in-out duration-500  ${e.border} border-r-2 ${DarkLight ? "border-[#252D3A]" : "border-gray-300"} h-full pt-1 `}>
-      <div className="flex justify-center">
+    <div className={` flex flex-col transition-all ease-in-out duration-500  ${e.border}  ClearBorder border-r-2 ${DarkLight ? "border-[#252D3A]" : "border-gray-300"} h-21  `}>
+      <div className="flex  justify-center">
         <h1 className="text-sm font-medium">{e.day}</h1>
       </div>
       {loading ? (<div className=" flex justify-center items-center w-full h-15">{dots}</div>) : (<div className="flex justify-evenly mt-2 items-center">

@@ -18,12 +18,12 @@ const SevenDayForecast = () => {
 
 
   return (
-    <div className={`w-full h-30 transition-all ease-in-out duration-500  ${DarkLight ? "text-white" : "text-black"} ${DarkLight ? "bg-[#172135]" : "bg-white"}  mt-3 rounded-lg`}>
-      <div className={`border-b-2 rounded-tr-lg  rounded-tl-lg w-full transition-all ease-in-out duration-500  bg-gradient-to-r  ${DarkLight ? "bg-[#212b3e]" : "from-[#F7F8FC] to-[#F7F8FC] via-[#F7FBFE]"} ${DarkLight ? "border-[#252D3A]" : "border-gray-300"} h-9 text-sm flex justify-between items-center px-5 `}>
+    <div className={`w-full h-30 grid3 transition-all ease-in-out duration-500  ${DarkLight ? "text-white" : "text-black"} ${DarkLight ? "bg-[#172135]" : "bg-white"}  mt-3 rounded-lg`}>
+      <div className={`border-b-2 rounded-tr-lg  rounded-tl-lg w-full transition-all ease-in-out duration-500  bg-gradient-to-r  ${DarkLight ? "bg-[#212b3e]" : "from-[#F7F8FC] to-[#F7F8FC] via-[#F7FBFE]"}  ${DarkLight ? "border-[#252D3A]" : "border-gray-300"} h-9 text-sm flex justify-between items-center px-5 `}>
         <p className="font-semibold tracking-wide">7-Day Forecast</p>
         
       </div>
-      <div className="w-[100%] flex justify-between items-center h-20 ">
+      <div className="w-[100%] grid grid-cols-7 grid4  h-23 ">
         {SevenComps.map(e => {
           return <SevenDayComp key={e.id} e={e} />;
         })}
